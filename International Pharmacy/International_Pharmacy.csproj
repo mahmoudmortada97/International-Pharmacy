@@ -1,0 +1,615 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{317DC2FA-54B1-4A00-B893-733CE647F8B7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>International_Pharmacy</RootNamespace>
+    <AssemblyName>International_Pharmacy</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework">
+      <HintPath>..\..\..\..\..\Downloads\Video\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\..\..\..\..\Downloads\Video\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>..\..\..\..\..\Downloads\Video\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.112.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>F:\app\Worked\product\11.2.0\dbhome_1\ODP.NET\bin\2.x\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.220.40.Trial\Telerik.WinControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.Aqua, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.Desert, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetro, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetroBlue, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetroTouch, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.Windows8, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.220.40.Trial\Telerik.WinControls.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.220.40.Trial\TelerikCommon.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Author\Add_Author.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Author\Add_Author.Designer.cs">
+      <DependentUpon>Add_Author.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\Add_Branch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\Add_Branch.Designer.cs">
+      <DependentUpon>Add_Branch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Category\Add_category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category\Add_category.Designer.cs">
+      <DependentUpon>Add_category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Author\delete_author.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Author\delete_author.Designer.cs">
+      <DependentUpon>delete_author.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\delete_branch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\delete_branch.Designer.cs">
+      <DependentUpon>delete_branch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Category\delete_category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category\delete_category.Designer.cs">
+      <DependentUpon>delete_category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Delete_employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\Delete_employee.Designer.cs">
+      <DependentUpon>Delete_employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Partner\Delete_Partner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Partner\Delete_Partner.Designer.cs">
+      <DependentUpon>Delete_Partner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product\delete_product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\delete_product.Designer.cs">
+      <DependentUpon>delete_product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Research\delete_research.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Research\delete_research.Designer.cs">
+      <DependentUpon>delete_research.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier\delete_supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier\delete_supplier.Designer.cs">
+      <DependentUpon>delete_supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Add_employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\Add_employee.Designer.cs">
+      <DependentUpon>Add_employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Partner\Add_Partner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Partner\Add_Partner.Designer.cs">
+      <DependentUpon>Add_Partner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product\Add_product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\Add_product.Designer.cs">
+      <DependentUpon>Add_product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Research\Add_research.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Research\Add_research.Designer.cs">
+      <DependentUpon>Add_research.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier\Add_supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier\Add_supplier.Designer.cs">
+      <DependentUpon>Add_supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Author\Author.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Author\Author.Designer.cs">
+      <DependentUpon>Author.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\Branch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\Branch.Designer.cs">
+      <DependentUpon>Branch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Category\Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category\Category.Designer.cs">
+      <DependentUpon>Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Author\Edit_Author.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Author\Edit_Author.Designer.cs">
+      <DependentUpon>Edit_Author.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\Edit_Branch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\Edit_Branch.Designer.cs">
+      <DependentUpon>Edit_Branch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Category\Edit_Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category\Edit_Category.Designer.cs">
+      <DependentUpon>Edit_Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Edit_employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\Edit_employee.Designer.cs">
+      <DependentUpon>Edit_employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Partner\Edit_Partner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Partner\Edit_Partner.Designer.cs">
+      <DependentUpon>Edit_Partner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product\Edit_product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\Edit_product.Designer.cs">
+      <DependentUpon>Edit_product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Research\Edit_research.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Research\Edit_research.Designer.cs">
+      <DependentUpon>Edit_research.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier\Edit_supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier\Edit_supplier.Designer.cs">
+      <DependentUpon>Edit_supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\employee.Designer.cs">
+      <DependentUpon>employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Partner\Partner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Partner\Partner.Designer.cs">
+      <DependentUpon>Partner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product\Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\Product.Designer.cs">
+      <DependentUpon>Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadForm1.Designer.cs">
+      <DependentUpon>RadForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Research\Research.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Research\Research.Designer.cs">
+      <DependentUpon>Research.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier\Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier\Supplier.Designer.cs">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Author\view_author.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Author\view_author.Designer.cs">
+      <DependentUpon>view_author.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\view_branch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\view_branch.Designer.cs">
+      <DependentUpon>view_branch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Category\view_category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category\view_category.Designer.cs">
+      <DependentUpon>view_category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\view_employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\view_employee.Designer.cs">
+      <DependentUpon>view_employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Partner\view_partner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Partner\view_partner.Designer.cs">
+      <DependentUpon>view_partner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product\view_product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\view_product.Designer.cs">
+      <DependentUpon>view_product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Research\view_research.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Research\view_research.Designer.cs">
+      <DependentUpon>view_research.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier\view_supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier\view_supplier.Designer.cs">
+      <DependentUpon>view_supplier.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Author\Add_Author.resx">
+      <DependentUpon>Add_Author.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Author\delete_author.resx">
+      <DependentUpon>delete_author.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Author\Edit_Author.resx">
+      <DependentUpon>Edit_Author.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Author\view_author.resx">
+      <DependentUpon>view_author.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch\Add_Branch.resx">
+      <DependentUpon>Add_Branch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch\delete_branch.resx">
+      <DependentUpon>delete_branch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch\Edit_Branch.resx">
+      <DependentUpon>Edit_Branch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch\view_branch.resx">
+      <DependentUpon>view_branch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Category\Add_category.resx">
+      <DependentUpon>Add_category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Category\delete_category.resx">
+      <DependentUpon>delete_category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Category\Edit_Category.resx">
+      <DependentUpon>Edit_Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Category\view_category.resx">
+      <DependentUpon>view_category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\Add_employee.resx">
+      <DependentUpon>Add_employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\Delete_employee.resx">
+      <DependentUpon>Delete_employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\view_employee.resx">
+      <DependentUpon>view_employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Partner\Add_Partner.resx">
+      <DependentUpon>Add_Partner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Partner\Delete_Partner.resx">
+      <DependentUpon>Delete_Partner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Partner\Edit_Partner.resx">
+      <DependentUpon>Edit_Partner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Partner\view_partner.resx">
+      <DependentUpon>view_partner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\Add_product.resx">
+      <DependentUpon>Add_product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\delete_product.resx">
+      <DependentUpon>delete_product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\Edit_product.resx">
+      <DependentUpon>Edit_product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\view_product.resx">
+      <DependentUpon>view_product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Research\Add_research.resx">
+      <DependentUpon>Add_research.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Research\delete_research.resx">
+      <DependentUpon>delete_research.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Research\Edit_research.resx">
+      <DependentUpon>Edit_research.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Research\view_research.resx">
+      <DependentUpon>view_research.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier\Add_supplier.resx">
+      <DependentUpon>Add_supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Author\Author.resx">
+      <DependentUpon>Author.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch\Branch.resx">
+      <DependentUpon>Branch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Category\Category.resx">
+      <DependentUpon>Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\Edit_employee.resx">
+      <DependentUpon>Edit_employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\employee.resx">
+      <DependentUpon>employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Partner\Partner.resx">
+      <DependentUpon>Partner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\Product.resx">
+      <DependentUpon>Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="RadForm1.resx">
+      <DependentUpon>RadForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Research\Research.resx">
+      <DependentUpon>Research.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier\delete_supplier.resx">
+      <DependentUpon>delete_supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier\Edit_supplier.resx">
+      <DependentUpon>Edit_supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier\Supplier.resx">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier\view_supplier.resx">
+      <DependentUpon>view_supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <!--sirinie -->
+    <None Include="Resources\09-1User-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\228840-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\160_F_112091570_meiRdEasGOcD2XEk1fZ1vuCbbgNkBmtn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\371299-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\USER2-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medikamenti-zales-tabletes-kapsulas-46883833.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26969364-login-icon-or-user-or-member-log-in-button-website-banner-Stock-Photo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medications_2_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cropped-open-site-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\handshake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\81-interface_-_branches_store_location-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medikamenti-zales-tabletes-kapsulas-468838331.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_add_capsule-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pill_capsule-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mActionDeleteSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\finddocument-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filled-trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circled-left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users-Add-User-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users-Find-User-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_user-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_profile-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\market_research_business_analysis_marketing_data_statistics_finance_graph_datum_analytics_flat_design_icon-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\81-interface_-_branches_store_location-5121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_274411.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\powiększenia-lub-symbol-szukaj-interfejsu_318-61461.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\648927-star-ratings-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\55443367-save-floppy-disk-icon-green-square-button-Stock-Photo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit-clear_mirrored.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-file-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\No-images-placeholder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\depositphotos_112771274-stock-photo-update-refresh-icon-soft-green.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\31914-200.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
